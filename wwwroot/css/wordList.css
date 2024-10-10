@@ -1,0 +1,75 @@
+.body {
+  height: 85%;
+  width: 60%;
+  margin: 0 auto;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.body .row {
+  height: 100%;
+}
+
+.body .row h1 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.table-container {
+  max-height: 90%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.table-container::-webkit-scrollbar {
+  display: none;
+}
+
+table.list {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+}
+
+table.list thead tr {
+  background-color: #0b192c;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+table.list th,
+table.list td {
+  padding: 12px 15px;
+  border: 1px solid #0b192c;
+  text-align: left;
+}
+
+table.list tbody tr {
+  transition: all ease-in 0.1s;
+}
+
+table.list tbody tr:nth-of-type(even) {
+  background-color: #d6d6d6;
+}
+
+table.list tbody tr:hover {
+  background-color: #0b192c;
+  color: white;
+  cursor: pointer;
+}
+
+/* Telefonlar için */
+@media only screen and (max-width: 767px) {
+  .body {
+    width: 90%;
+    padding: 5% 2%;
+  }
+  .row h1 {
+    font-size: 25px;
+  }
+}

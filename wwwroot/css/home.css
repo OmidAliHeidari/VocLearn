@@ -1,0 +1,95 @@
+.body {
+  width: 100%;
+  padding: 0 20%;
+  height: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.body .card {
+  width: 45%;
+  height: 55%;
+  padding: 20px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #0b192c;
+}
+.card-header {
+  font-size: 35px;
+  font-weight: bolder;
+  text-align: center;
+  color: #3b82f6;
+  margin-bottom: 40px;
+}
+.card-body {
+  flex-grow: 1;
+}
+.body-header {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bolder;
+  margin: 5px 0;
+  color: #ffffff;
+}
+.body-text {
+  font-size: 15px;
+  line-height: 1.8;
+  margin: 15px 0;
+  color: #ffffff;
+}
+.card-footer {
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+/* Tabletler için */
+@media only screen and (max-width: 1024px) {
+  .body{
+    padding: 0 10%;
+  }
+  .card-body h2{
+    font-size: 17px;
+  }
+  .card-body .body-text{
+    font-size: 12px;
+  }
+  .body .card{
+    height: 50%;
+  }
+  .card-footer{
+    margin: 0;
+    transform: scale(.8);
+    font-size: 13px;
+  }
+}
+/* Telefonlar için */
+@media only screen and (max-width: 767px) {
+  .body{
+    flex-direction: column;
+    padding: 10% 0;
+    gap: 5%;
+  }
+  .body .card{
+    width: 80%;
+    height: 40%;
+  }
+  .card-header{
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .card-body h2{
+    font-size: 15px;
+  }
+  .card-body .body-text{
+    font-size: 10px;
+  }
+}

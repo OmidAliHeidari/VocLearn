@@ -1,0 +1,75 @@
+.body{
+    height: 85%;
+    width: 60%;
+    margin: 0 auto;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.body .btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    transition: all ease .3s;
+    &:hover{
+        background-color: #0056b3;
+    }
+}
+.body .row{
+    height: 90%;
+}
+.body .row h1{
+    margin-bottom: 10px;
+    color: #fff;
+}
+.body .row .list{
+    margin-top: 30px;
+    display: flex;
+    max-height: 90%;
+    overflow-y: auto;
+    flex-direction: column;
+}
+.row .list .list-row{
+    padding: 7px 17px;
+    border-radius: 10px;
+    width: 180px;
+    background-color: #0b192c;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    & hr{
+        height: 20px;
+    }
+    & .delete{
+        color: red;
+        &:hover{
+            color: rgba(255, 0, 0, 0.344);
+        }
+    }
+}
+.row .list .list-row a{
+    color: #3b82f6;
+    font-size: 20px;
+    transition: all ease .3s;
+    &:hover {
+        color: #3b83f672;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .body{
+        width: 90%;
+        padding: 8% 2%;
+    }
+    .row h1{
+        font-size: 25px;
+    }
+    .list .list-row{
+        transform: scale(.8);
+    }
+}

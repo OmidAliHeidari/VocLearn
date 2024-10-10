@@ -1,0 +1,47 @@
+@model IEnumerable<Card>
+@section Style {
+    <link rel="stylesheet" href="~/css/flashcards.css">
+}
+@{
+    ViewData["Title"] = "VocLearn - Day - " + Model.FirstOrDefault()?.UploadTime.ToString("dd-MM-yy");
+}
+
+<main class="body">
+    <div class="row">
+        <div class="row-header">
+            <h1>Flashcards</h1>
+            <hr>
+        </div>
+        <div class="container">
+            @foreach (var c in Model)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <span class="header-link" id="word-@c.CardId">@c.Word</span>
+                        <hr>
+                    </div>
+                    <p class="card-body" id="example-@c.CardId">@c.Example</p>
+                    <div class="card-footer">
+                        <a asp-action="EditCard" class="btn btn-edit" asp-route-cardId="@c.CardId">Edit</a>
+                        <a asp-action="DeleteCard" asp-route-cardId="@c.CardId" class="btn btn-delete">Delete</a>
+                        <a onclick="toggleMean('@c.CardId', '@c.Word', '@c.Mean')" class="btn btn-toggle">Show Mean</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    <script>
+        function toggleMean(cardId, word, mean) {
+            const wordElement = document.getElementById("word-" + cardId);
+
+            if (wordElement.innerText === word) {
+                wordElement.innerText = mean;
+            } else {
+                wordElement.innerText = word;
+            }
+        }
+    </script>
+}

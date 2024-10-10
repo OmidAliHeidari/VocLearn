@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  user-select: none;
+  background: linear-gradient(220.55deg, #565656 0%, #181818 100%);
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10%;
+  padding: 10px 20%;
+}
+.header .logo {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #3b82f6;
+}
+.header .navigations {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bolder;
+  gap: 25px;
+  & a {
+    color: #ffffff;
+    transition: color ease 0.3s;
+    &:hover {
+      color: #3b82f6;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5%;
+  & p,
+  a {
+    transition: color ease 0.3s;
+    color: #ffffff;
+  }
+  & a:hover {
+    color: #3b82f6;
+  }
+}
+
+/* Tabletler için */
+@media only screen and (max-width: 1024px) {
+  .footer p{
+    font-size: 10px;
+  }
+}
+/* Telefonlar için */
+@media only screen and (max-width: 767px) {
+  .header{
+    flex-direction: column;
+  }
+  .header .logo{
+    font-size: 25px;
+    
+  }
+  .header .navigations{
+    font-size: 15px;
+  }
+}

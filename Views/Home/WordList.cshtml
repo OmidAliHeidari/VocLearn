@@ -1,0 +1,36 @@
+@model IEnumerable<Card>
+@section Style {
+    <link rel="stylesheet" href="~/css/wordList.css">
+}
+@{
+    ViewData["Title"] = "VocLearn - Word List";
+}
+<main class="body">
+    <div class="row">
+        <h1>Word List</h1>
+        <hr>
+        <div class="table-container">
+            <table class="list">
+                <thead>
+                    <tr>
+                        <th>Word</th>
+                        <th>Example</th>
+                        <th>Mean</th>
+                        <th>Upload Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var d in Model)
+                    {
+                        <tr>
+                            <td>@d.Word</td>
+                            <td>@d.Example</td>
+                            <td>@d.Mean</td>
+                            <td>@d.UploadTime.ToString("dd/MM")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>

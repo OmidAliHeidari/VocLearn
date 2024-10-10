@@ -1,0 +1,130 @@
+.body {
+  height: 85%;
+  width: 60%;
+  margin: 0 auto;
+  padding: 2% 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.body .row {
+  height: 100%;
+}
+
+.body .row h1 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+.row .row-header {
+  height: 7%;
+}
+.container {
+  display: flex;
+  gap: 5%;
+  flex-wrap: wrap;
+  padding: 10px;
+  max-height: 92%;
+  overflow-y: scroll;
+}
+.container .card {
+  height: 300px;
+  width: 30%;
+  margin-bottom: 30px;
+  background-color: #0b192c;
+  border-radius: 30px;
+  user-select: text;
+}
+.card .card-header {
+  text-align: center;
+  width: 75%;
+  height: 20%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+.header-link {
+  font-size: 25px;
+  color: #3b82f6;
+}
+.card .card-body {
+  height: 40%;
+  padding: 20px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.card .card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+  flex-wrap: wrap;
+  gap: 10%;
+  border-radius: 30px;
+  padding: 10px 0;
+}
+.card .card-footer .btn {
+  width: 30%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  &:hover {
+    background-color: #0056b3;
+  }
+  &.btn-toggle {
+    width: 45%;
+  }
+  &.btn-delete {
+    background-color: red;
+    &:hover {
+      background-color: darkred;
+    }
+  }
+}
+/* Tabletler için */
+@media only screen and (max-width: 1024px) {
+  .body {
+    width: 90%;
+  }
+  .card {
+    padding: 13px 0;
+  }
+  .card .card-footer {
+    transform: scale(0.9);
+    gap: 3%;
+  }
+  .card .card-footer {
+    text-align: center;
+    & .btn-delete,
+    .btn-edit {
+      width: 45% !important;
+    }
+  }
+  .card .card-footer .btn-toggle {
+    width: 80% !important;
+  }
+}
+/* Telefonlar için */
+@media only screen and (max-width: 767px) {
+  .container .card {
+    width: 45%;
+    height: 250px;
+  }
+  .body {
+    width: 90%;
+    padding: 5% 2%;
+  }
+  .row h1 {
+    font-size: 25px;
+  }
+  .card .card-footer {
+    transform: scale(0.5);
+    width: 140%;
+    margin: 0 -30px;
+    padding: 0;
+  }
+}

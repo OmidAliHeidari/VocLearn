@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css">
+    @RenderSection("Style", false)
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <a asp-action="Index" class="logo">VocLearn</a>
+        <nav class="navigations">
+            <a asp-action="Index">Home</a>
+            <a asp-action="Card">Days</a>
+            <a asp-action="WordList">Word List</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    @RenderBody()
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            Design by
+            <a href="https://github.com/OmidAliHeidari">Ali Heidari</a>
+        </p>
+    </footer>
+    
+    <!-- Script -->
+    @RenderSection("Scripts", false);
+</body>
+
+</html>

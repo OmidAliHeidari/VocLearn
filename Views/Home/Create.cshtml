@@ -1,0 +1,25 @@
+@model Card
+@section Style {
+    <link rel="stylesheet" href="~/css/create.css">
+}
+@{
+    ViewData["Title"] = "VocLearn - Create Flashcard";
+}
+<form asp-action="Create" enctype="multipart/form-data" method="post" class="form">
+    <div class="form-groups">
+        <h1>Create Flashcard</h1>
+        <div class="form-group">
+            <label asp-for="Word"></label>
+            <input asp-for="Word" autocomplete="off" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Example"></label>
+            <input asp-for="Example" autocomplete="off" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Mean"></label>
+            <input asp-for="Mean" autocomplete="off" />
+        </div>
+        <button type="submit" class="btn">Create</button>
+    </div>
+</form>

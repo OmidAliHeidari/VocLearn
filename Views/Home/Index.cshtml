@@ -1,0 +1,35 @@
+﻿@section Style {
+    <link rel="stylesheet" href="~/css/home.css">
+}
+@{
+    ViewData["Title"] = "VocLearn - Home";
+}
+<main class="body">
+    <section class="card">
+        <h1 class="card-header">Flashcards</h1>
+        <div class="card-body">
+            <h2 class="body-header">You can create your flashcards and work daily</h2>
+            <hr>
+            <p class="body-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores eos nemo rerum illum libero
+                voluptate optio recusandae ipsa odio dolor, placeat excepturi ad, et quidem perspiciatis voluptatum
+                mollitia in laboriosam.
+            </p>
+        </div>
+        <a asp-action="Create" class="card-footer">Create Your Flashcard</a>
+    </section>
+
+    <section class="card">
+        <h1 class="card-header">Word List</h1>
+        <div class="card-body">
+            <h2 class="body-header">You can repeat the words you added to the flashcards</h2>
+            <hr>
+            <p class="body-text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores eos nemo rerum illum libero
+                voluptate optio recusandae ipsa odio dolor, placeat excepturi ad, et quidem perspiciatis voluptatum
+                mollitia in laboriosam.
+            </p>
+        </div>
+        <a asp-action="WordList" class="card-footer">Study Your Words</a>
+    </section>
+</main>

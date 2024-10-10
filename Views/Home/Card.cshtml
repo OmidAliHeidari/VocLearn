@@ -1,0 +1,28 @@
+@model IEnumerable<DateTime>
+@section Style {
+    <link rel="stylesheet" href="~/css/card.css">
+}
+@{
+    ViewData["Title"] = "VocLearn - Days";
+}
+<main class="body">
+    @{
+        var i = 0;
+    }
+    <div class="row">
+        <h1>Day List</h1>
+        <hr>
+        <div class="list">
+            @foreach (var d in Model)
+            {
+                <div class="list-row">
+                    <a asp-action="FlashCards" asp-route-date="@d">Day @i</a>
+                    <hr>
+                    <a asp-action="Delete" asp-route-date="@d" class="delete">Delete</a>
+                </div>
+                i++;
+            }
+        </div>
+    </div>
+    <a asp-action="Create" class="btn">Create Flashcard</a>
+</main>
